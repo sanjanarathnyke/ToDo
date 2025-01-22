@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">My Todo List</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Add Todo Form -->
+                        <form class="mb-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Add new task...">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Filters -->
+                        <div class="btn-group mb-4" role="group">
+                            <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                            <button class="btn btn-outline-primary" data-filter="active">Active</button>
+                            <button class="btn btn-outline-primary" data-filter="completed">Completed</button>
+                        </div>
+
+                        <!-- Todo List -->
+                        <div class="todo-list">
+                            <!-- Dynamically populated by TypeScript -->
+                        </div>
+
+                        <!-- Summary -->
+                        <div class="mt-4 d-flex justify-content-between text-muted">
+                            <span>0 items left</span>
+                            <button class="btn btn-link text-muted p-0">Clear completed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Compiled JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
